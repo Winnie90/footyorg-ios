@@ -9,13 +9,13 @@
 /* Begin PBXBuildFile section */
 		369B797F0E20119ECB9FE790 /* Pods_FootyOrgTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75398E200C39F609CAFC45 /* Pods_FootyOrgTests.framework */; };
 		8305433B1E33F20C000B2363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305433A1E33F20C000B2363 /* AppDelegate.swift */; };
-		8305433D1E33F20C000B2363 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305433C1E33F20C000B2363 /* ViewController.swift */; };
 		830543401E33F20C000B2363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8305433E1E33F20C000B2363 /* Main.storyboard */; };
 		830543421E33F20C000B2363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 830543411E33F20C000B2363 /* Assets.xcassets */; };
 		830543451E33F20C000B2363 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 830543431E33F20C000B2363 /* LaunchScreen.storyboard */; };
 		830543501E33F20C000B2363 /* FootyOrgTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305434F1E33F20C000B2363 /* FootyOrgTests.swift */; };
 		8305435B1E33F20C000B2363 /* FootyOrgUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305435A1E33F20C000B2363 /* FootyOrgUITests.swift */; };
 		830543691E33F3CB000B2363 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 830543681E33F3CB000B2363 /* GoogleService-Info.plist */; };
+		8305436C1E33FF97000B2363 /* GroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305436B1E33FF97000B2363 /* GroupTableViewController.swift */; };
 		882BD1346F4B07A255406BC7 /* Pods_FootyOrgUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36E4A9C349668ECF73B4F755 /* Pods_FootyOrgUITests.framework */; };
 		8A96F5EF10CA01D36E63ECE6 /* Pods_FootyOrg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7233270B951A2A32B5AEE924 /* Pods_FootyOrg.framework */; };
 /* End PBXBuildFile section */
@@ -45,7 +45,6 @@
 		7233270B951A2A32B5AEE924 /* Pods_FootyOrg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootyOrg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		830543371E33F20C000B2363 /* FootyOrg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootyOrg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8305433A1E33F20C000B2363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8305433C1E33F20C000B2363 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8305433F1E33F20C000B2363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		830543411E33F20C000B2363 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		830543441E33F20C000B2363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		8305435A1E33F20C000B2363 /* FootyOrgUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootyOrgUITests.swift; sourceTree = "<group>"; };
 		8305435C1E33F20C000B2363 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		830543681E33F3CB000B2363 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		8305436B1E33FF97000B2363 /* GroupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GroupTableViewController.swift; path = Groups/GroupTableViewController.swift; sourceTree = "<group>"; };
 		A7570B489FB6CF29DED3D1DE /* Pods-FootyOrgTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyOrgTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootyOrgTests/Pods-FootyOrgTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AECA93CD92C11366C2392EAB /* Pods-FootyOrg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyOrg.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootyOrg/Pods-FootyOrg.debug.xcconfig"; sourceTree = "<group>"; };
 		EBA404A93D5CD3135C0F3C60 /* Pods-FootyOrgUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyOrgUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootyOrgUITests/Pods-FootyOrgUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 		830543391E33F20C000B2363 /* FootyOrg */ = {
 			isa = PBXGroup;
 			children = (
+				8305436A1E33FF61000B2363 /* Groups */,
 				8305433A1E33F20C000B2363 /* AppDelegate.swift */,
-				8305433C1E33F20C000B2363 /* ViewController.swift */,
 				8305433E1E33F20C000B2363 /* Main.storyboard */,
 				830543411E33F20C000B2363 /* Assets.xcassets */,
 				830543431E33F20C000B2363 /* LaunchScreen.storyboard */,
@@ -156,6 +156,14 @@
 				8305435C1E33F20C000B2363 /* Info.plist */,
 			);
 			path = FootyOrgUITests;
+			sourceTree = "<group>";
+		};
+		8305436A1E33FF61000B2363 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				8305436B1E33FF97000B2363 /* GroupTableViewController.swift */,
+			);
+			name = Groups;
 			sourceTree = "<group>";
 		};
 		D640484405C943A7CBD95E3A /* Frameworks */ = {
@@ -437,8 +445,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8305433D1E33F20C000B2363 /* ViewController.swift in Sources */,
 				8305433B1E33F20C000B2363 /* AppDelegate.swift in Sources */,
+				8305436C1E33FF97000B2363 /* GroupTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
