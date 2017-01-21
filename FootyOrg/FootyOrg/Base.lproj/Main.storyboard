@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MHh-Zm-vhy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1212" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ywV-G2-7x4">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Group Table View Controller-->
+        <!--Your Teams-->
         <scene sceneID="d0q-Gb-5LT">
             <objects>
-                <tableViewController id="MHh-Zm-vhy" customClass="GroupTableViewController" customModule="FootyOrg" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="MHh-Zm-vhy" customClass="TeamTableViewController" customModule="FootyOrg" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="c7Q-Hd-BvQ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -32,10 +33,104 @@
                             <outlet property="delegate" destination="MHh-Zm-vhy" id="NHK-up-yDK"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Your Teams" id="4aM-Sm-Txd"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVv-80-A3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="31" y="-119"/>
+            <point key="canvasLocation" x="-585" y="-120"/>
+        </scene>
+        <!--Teams-->
+        <scene sceneID="wCK-jb-Tqc">
+            <objects>
+                <navigationController id="1M6-Ib-oKL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Teams" id="omh-W7-Jey"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ITd-88-q7E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MHh-Zm-vhy" kind="relationship" relationship="rootViewController" id="egZ-U7-DNd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xE2-4w-ESv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1279" y="-120"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="bzT-1L-qEG">
+            <objects>
+                <tabBarController id="ywV-G2-7x4" customClass="MainTabBarController" customModule="FootyOrg" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="act-X4-H3o">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="lCH-dv-VEZ" kind="relationship" relationship="viewControllers" id="Yxi-l9-nD1"/>
+                        <segue destination="1M6-Ib-oKL" kind="relationship" relationship="viewControllers" id="oN0-1r-l1j"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yPF-a5-Yd6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2009" y="-396"/>
+        </scene>
+        <!--Player-->
+        <scene sceneID="mde-Jf-iLI">
+            <objects>
+                <viewController id="lCH-dv-VEZ" customClass="PlayerDetailsViewController" customModule="FootyOrg" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Rzf-GP-CV1"/>
+                        <viewControllerLayoutGuide type="bottom" id="16V-Sz-aUw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8Zw-bK-Dcd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Cb-yr-GEF">
+                                <rect key="frame" x="157" y="552" width="60" height="30"/>
+                                <state key="normal" title="Sign Out"/>
+                                <connections>
+                                    <action selector="signOutButtonTapped:" destination="lCH-dv-VEZ" eventType="touchUpInside" id="djp-3U-w9q"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7y7-FK-jYb" customClass="GIDSignInButton">
+                                <rect key="frame" x="24" y="547" width="327" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="V45-e7-duz"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GjD-hl-umx">
+                                <rect key="frame" x="24" y="128" width="327" height="411"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7y7-FK-jYb" firstAttribute="leading" secondItem="8Zw-bK-Dcd" secondAttribute="leadingMargin" constant="8" id="1gW-QX-CUS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GjD-hl-umx" secondAttribute="trailing" constant="8" id="2YZ-UF-Ig8"/>
+                            <constraint firstItem="9Cb-yr-GEF" firstAttribute="centerX" secondItem="8Zw-bK-Dcd" secondAttribute="centerX" id="3kC-TT-MzG"/>
+                            <constraint firstItem="GjD-hl-umx" firstAttribute="leading" secondItem="8Zw-bK-Dcd" secondAttribute="leadingMargin" constant="8" id="4Jn-5p-Lj8"/>
+                            <constraint firstAttribute="bottom" secondItem="7y7-FK-jYb" secondAttribute="bottom" constant="80" id="NEa-RQ-oxL"/>
+                            <constraint firstItem="9Cb-yr-GEF" firstAttribute="centerY" secondItem="7y7-FK-jYb" secondAttribute="centerY" id="any-0m-Ks8"/>
+                            <constraint firstItem="GjD-hl-umx" firstAttribute="centerX" secondItem="8Zw-bK-Dcd" secondAttribute="centerX" id="giz-Ey-8O5"/>
+                            <constraint firstItem="7y7-FK-jYb" firstAttribute="top" secondItem="GjD-hl-umx" secondAttribute="bottom" constant="8" id="jrO-sP-Rwg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="7y7-FK-jYb" secondAttribute="trailing" constant="8" id="nGb-46-A6L"/>
+                            <constraint firstItem="GjD-hl-umx" firstAttribute="centerY" secondItem="8Zw-bK-Dcd" secondAttribute="centerY" id="oCW-Zt-pgm"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Player" id="8gh-vr-FSv"/>
+                    <connections>
+                        <outlet property="signInButton" destination="7y7-FK-jYb" id="2y5-q5-Oes"/>
+                        <outlet property="signOutButton" destination="9Cb-yr-GEF" id="aA3-pU-Za6"/>
+                        <outlet property="welcomeLabel" destination="GjD-hl-umx" id="4Fs-4H-pGt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OYL-Ay-4Fc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1278" y="-774"/>
         </scene>
     </scenes>
 </document>

@@ -7,9 +7,10 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseDatabase
+import FirebaseAuth
 
-class GroupTableViewController: UITableViewController {
+class TeamTableViewController: UITableViewController {
 
     var groups = NSArray()
     
@@ -19,16 +20,25 @@ class GroupTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        loadData()
+    }
+    
+    private func loadData() {
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
-        
-        ref.child("groups").observeSingleEvent(of: .value, with: { (snapshot) in
-            if let tempGroups = snapshot.value as? NSDictionary {
-                self.groups = tempGroups.allKeys as NSArray
-                self.tableView.reloadData()
+        if let currentUser = FIRAuth.auth()?.currentUser {
+            ref.child("users").child(currentUser.uid).child("groups").observeSingleEvent(of: .value, with: { (snapshot) in
+                if let tempGroups = snapshot.value as? NSDictionary {
+                    self.groups = tempGroups.allKeys as NSArray
+                    self.tableView.reloadData()
+                }
+            }) { (error) in
+                print(error.localizedDescription)
             }
-        }) { (error) in
-            print(error.localizedDescription)
         }
     }
 
