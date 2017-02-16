@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		369B797F0E20119ECB9FE790 /* Pods_FootyOrgTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF75398E200C39F609CAFC45 /* Pods_FootyOrgTests.framework */; };
+		79AE0C111E4CB7800004849F /* AddTeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AE0C101E4CB7800004849F /* AddTeamViewController.swift */; };
 		8305433B1E33F20C000B2363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8305433A1E33F20C000B2363 /* AppDelegate.swift */; };
 		830543401E33F20C000B2363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8305433E1E33F20C000B2363 /* Main.storyboard */; };
 		830543421E33F20C000B2363 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 830543411E33F20C000B2363 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		4237DA3870FB191FA00D759A /* Pods-FootyOrgTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyOrgTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FootyOrgTests/Pods-FootyOrgTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E686F1F4C18DDD5FEE76CE7 /* Pods-FootyOrgUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FootyOrgUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FootyOrgUITests/Pods-FootyOrgUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7233270B951A2A32B5AEE924 /* Pods_FootyOrg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FootyOrg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79AE0C101E4CB7800004849F /* AddTeamViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddTeamViewController.swift; path = Groups/AddTeamViewController.swift; sourceTree = "<group>"; };
 		830543371E33F20C000B2363 /* FootyOrg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootyOrg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8305433A1E33F20C000B2363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8305433F1E33F20C000B2363 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -136,7 +138,7 @@
 				830543741E341FF0000B2363 /* GoogleService-Info.plist */,
 				830543411E33F20C000B2363 /* Assets.xcassets */,
 				8305436D1E3408AF000B2363 /* Sign-in */,
-				8305436A1E33FF61000B2363 /* Groups */,
+				8305436A1E33FF61000B2363 /* Teams */,
 				830543701E340C75000B2363 /* Storyboard */,
 			);
 			path = FootyOrg;
@@ -160,12 +162,13 @@
 			path = FootyOrgUITests;
 			sourceTree = "<group>";
 		};
-		8305436A1E33FF61000B2363 /* Groups */ = {
+		8305436A1E33FF61000B2363 /* Teams */ = {
 			isa = PBXGroup;
 			children = (
 				8305436B1E33FF97000B2363 /* TeamTableViewController.swift */,
+				79AE0C101E4CB7800004849F /* AddTeamViewController.swift */,
 			);
-			name = Groups;
+			name = Teams;
 			sourceTree = "<group>";
 		};
 		8305436D1E3408AF000B2363 /* Sign-in */ = {
@@ -271,7 +274,7 @@
 				TargetAttributes = {
 					830543361E33F20C000B2363 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = FB63265GZ6;
+						DevelopmentTeam = 87UEWGZE24;
 						ProvisioningStyle = Automatic;
 					};
 					8305434A1E33F20C000B2363 = {
@@ -465,6 +468,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8305433B1E33F20C000B2363 /* AppDelegate.swift in Sources */,
+				79AE0C111E4CB7800004849F /* AddTeamViewController.swift in Sources */,
 				8305436C1E33FF97000B2363 /* TeamTableViewController.swift in Sources */,
 				8305436F1E3408E4000B2363 /* PlayerDetailsViewController.swift in Sources */,
 			);
@@ -619,10 +623,10 @@
 			baseConfigurationReference = AECA93CD92C11366C2392EAB /* Pods-FootyOrg.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FB63265GZ6;
+				DEVELOPMENT_TEAM = 87UEWGZE24;
 				INFOPLIST_FILE = FootyOrg/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.winstanley.FootyOrg;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winstanley.footyorg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -633,10 +637,10 @@
 			baseConfigurationReference = 265E44E208D35DE1BD03C450 /* Pods-FootyOrg.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FB63265GZ6;
+				DEVELOPMENT_TEAM = 87UEWGZE24;
 				INFOPLIST_FILE = FootyOrg/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.winstanley.FootyOrg;
+				PRODUCT_BUNDLE_IDENTIFIER = com.winstanley.footyorg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

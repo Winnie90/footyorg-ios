@@ -12,7 +12,7 @@ import FirebaseAuth
 
 class TeamTableViewController: UITableViewController {
 
-    var groups = NSArray()
+    var groups = NSMutableArray()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +30,28 @@ class TeamTableViewController: UITableViewController {
     private func loadData() {
         var ref: FIRDatabaseReference!
         ref = FIRDatabase.database().reference()
+
+        self.groups.removeAllObjects()
+
         if let currentUser = FIRAuth.auth()?.currentUser {
             ref.child("users").child(currentUser.uid).child("groups").observeSingleEvent(of: .value, with: { (snapshot) in
                 if let tempGroups = snapshot.value as? NSDictionary {
-                    self.groups = tempGroups.allKeys as NSArray
-                    self.tableView.reloadData()
+                    let tempGroupKeys = tempGroups.allKeys as NSArray
+                    var index = 0
+                    for group in tempGroupKeys {
+                        ref.child("groups").child(group as! String).observeSingleEvent(of: .value, with: { (snapshot) in
+                            if let group = snapshot.value as? NSDictionary {
+                                self.groups.add(group)
+                            }
+                            index += 1
+                            if index == tempGroupKeys.count {
+                                self.tableView.reloadData()
+                            }
+                        }) { (error) in
+                            print(error.localizedDescription)
+                        }
+                    }
+                    
                 }
             }) { (error) in
                 print(error.localizedDescription)
@@ -59,7 +76,8 @@ class TeamTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GroupTableViewCell", for: indexPath)
-        cell.textLabel?.text = groups.object(at: indexPath.row) as? String
+        let group = groups.object(at: indexPath.row) as? NSDictionary
+        cell.textLabel?.text = group?.value(forKey: "name") as! String?
         return cell
     }
 

@@ -22,6 +22,9 @@ PODS:
   - FirebaseDatabase (3.0.2):
     - FirebaseAnalytics (~> 3.2)
   - FirebaseInstanceID (1.0.8)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
   - GoogleAppUtilities (1.1.1):
     - GoogleSymbolUtilities (~> 1.0)
   - GoogleAuthUtilities (2.0.1):
@@ -42,12 +45,50 @@ PODS:
   - GoogleSymbolUtilities (1.1.1)
   - GoogleUtilities (1.3.1):
     - GoogleSymbolUtilities (~> 1.0)
+  - JSONModel (1.3.0)
+  - OptimizelySDKCore (1.0.0):
+    - OptimizelySDKCore/JSONModel (= 1.0.0)
+  - OptimizelySDKCore/JSONModel (1.0.0):
+    - JSONModel (= 1.3.0)
+  - OptimizelySDKDatafileManager (1.0.0):
+    - OptimizelySDKDatafileManager/JSONModel (= 1.0.0)
+    - OptimizelySDKShared (= 1.0.0)
+  - OptimizelySDKDatafileManager/JSONModel (1.0.0):
+    - JSONModel (= 1.3.0)
+    - OptimizelySDKShared (= 1.0.0)
+  - OptimizelySDKEventDispatcher (1.0.0):
+    - OptimizelySDKEventDispatcher/JSONModel (= 1.0.0)
+    - OptimizelySDKShared (= 1.0.0)
+  - OptimizelySDKEventDispatcher/JSONModel (1.0.0):
+    - JSONModel (= 1.3.0)
+    - OptimizelySDKShared (= 1.0.0)
+  - OptimizelySDKiOS (1.0.0):
+    - OptimizelySDKDatafileManager (= 1.0.0)
+    - OptimizelySDKEventDispatcher (= 1.0.0)
+    - OptimizelySDKiOS/JSONModel (= 1.0.0)
+    - OptimizelySDKUserProfile (= 1.0.0)
+  - OptimizelySDKiOS/JSONModel (1.0.0):
+    - JSONModel (= 1.3.0)
+    - OptimizelySDKDatafileManager (= 1.0.0)
+    - OptimizelySDKEventDispatcher (= 1.0.0)
+    - OptimizelySDKUserProfile (= 1.0.0)
+  - OptimizelySDKShared (1.0.0):
+    - FMDB (= 2.6.2)
+    - JSONModel (= 1.3.0)
+    - OptimizelySDKCore (= 1.0.0)
+  - OptimizelySDKUserProfile (1.0.0):
+    - OptimizelySDKShared (= 1.0.0)
+    - OptimizelySDKUserProfile/JSONModel (= 1.0.0)
+  - OptimizelySDKUserProfile/JSONModel (1.0.0):
+    - JSONModel (= 1.3.0)
+    - OptimizelySDKShared (= 1.0.0)
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - GoogleSignIn
+  - OptimizelySDKiOS
 
 SPEC CHECKSUMS:
   Firebase: 754562547af419cc2f4b15247fee419081924bc2
@@ -55,6 +96,7 @@ SPEC CHECKSUMS:
   FirebaseAuth: 26fd291c3b552fc9658420b867520d5ae080421c
   FirebaseDatabase: 59bea2e7dfd81b3b8b2f8e396caf1a52c2ced6f7
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
   GoogleAppUtilities: f1730f91f67767b453c289577040dd3f425ffdc7
   GoogleAuthUtilities: d7a19615cd7627688afcf181737f1011ee8b5a23
   GoogleInterchangeUtilities: def8415a862effc67d549d5b5b0b9c7a2f97d4de
@@ -63,7 +105,14 @@ SPEC CHECKSUMS:
   GoogleSignIn: 09036ed61f8e75f1424100d63f7719480b2428c3
   GoogleSymbolUtilities: 33117db1b5f290c6fbf259585e4885b4c84b98d7
   GoogleUtilities: 56c5ac05b7aa5dc417a1bb85221a9516e04d7032
+  JSONModel: 81c06ecf99190a25fa6aafceea5faffa7880868a
+  OptimizelySDKCore: 9afee6d477bec1f03f0bb0ecca24db3e1fd4108b
+  OptimizelySDKDatafileManager: 61955cbc1eaff2658f2337fe67d07cd14ff01ca3
+  OptimizelySDKEventDispatcher: ec0a7d516dc2b4ec64359887a0713376ba3db1fb
+  OptimizelySDKiOS: 69cf12e8b392588f442afbdb5b9d1a14be27b354
+  OptimizelySDKShared: 46c9fff9b63ba15aa75b8f1d8314d66d84bad620
+  OptimizelySDKUserProfile: 3b693abe3951289ed36b632e53aceb4562f055f2
 
-PODFILE CHECKSUM: f9a38dd6abbb170f3830f21b732f3c5a9b29acb8
+PODFILE CHECKSUM: 991304ca7da5c1a620f8e1689ff2fe4e99b15e63
 
 COCOAPODS: 1.0.1
